@@ -1,0 +1,498 @@
+// importing other scss files
+@import "_utility";
+@import "_colors";
+// body styles
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-family: "Nunito", sans-serif;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+// humberger
+.humberger-menu {
+    position: fixed;
+    top: 1.5rem;
+    right: 2.5rem;
+    height: 5rem;
+    width: 5rem;
+    z-index: 10000;
+    cursor: pointer;
+    span {
+        height: 6px;
+        width: 5rem;
+        background-color: $light-blue;
+        display: block;
+        margin: 7px 0;
+        transition: all 0.5s ease-in-out;
+    }
+    .line-light {
+        background-color: $light-bg;
+    }
+}
+
+// humberger animation
+.animate .line-2 {
+    transform: translateX(-3rem);
+    opacity: 0;
+}
+
+.animate .line-1 {
+    transform: translateY(210%) rotateZ(45deg);
+}
+
+.animate .line-3 {
+    transform: translateY(-210%) rotateZ(-45deg);
+}
+
+// navbar
+nav {
+    height: 10vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    .container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // padding-top: 1rem;
+        // logo
+        .logo {
+            margin: 2rem 0 0 -1rem;
+            img {
+                height: 5rem;
+                width: 5rem;
+            }
+        }
+        ul {
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            background-color: $dark-bg;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(-100%);
+            transition: all 0.5s ease-in-out;
+            z-index: 1000;
+            li {
+                margin: 2rem auto;
+                width: 100%;
+                text-align: center;
+                a {
+                    color: $light-font-color;
+                    font-size: 2rem;
+                }
+            }
+        }
+        // navbar toggle class
+        .open {
+            transform: translateY(0);
+        }
+        .close {
+            transform: translateY(-100%);
+        }
+    }
+}
+
+// changing nav bg on scroll
+.nav-bg {
+    background-color: $light-bg;
+    box-shadow: 0 7.5px 10px rgba(0, 0, 0, 0.01);
+}
+
+// showcase styles
+.showcase {
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    background-color: $light-bg;
+    background-image: url("/assets/backgrounds/computer.svg");
+    background-size: 80%;
+    background-position: 90% 60%;
+    background-repeat: no-repeat;
+    .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        .showcase-contents {
+            margin: 3rem 0 3rem 0;
+            padding: 3rem 0;
+            position: relative;
+            width: 100%;
+            height: 400px;
+            h2 {
+                font-size: 2rem;
+                font-weight: bolder;
+                color: $light-gray-3;
+                margin-top: 2rem;
+            }
+            .stroke-alireza {
+                -webkit-text-stroke: 2px $purple;
+                color: transparent;
+                position: absolute;
+                top: 9rem;
+                left: 0%;
+                font-size: 6rem;
+            }
+            .alireza {
+                content: "";
+                top: 9rem;
+                left: 0%;
+                position: absolute;
+                animation: text-wave 5s ease-in-out infinite;
+                color: $purple;
+                z-index: 10;
+                font-size: 6rem;
+            }
+            @keyframes text-wave {
+                0%,
+                100% {
+                    clip-path: polygon( 0 46%, 11% 41%, 28% 41%, 42% 48%, 56% 61%, 68% 75%, 84% 81%, 99% 84%, 100% 100%, 0 100%);
+                }
+                50% {
+                    clip-path: polygon( 0 81%, 10% 78%, 26% 71%, 39% 64%, 56% 49%, 71% 42%, 88% 41%, 100% 48%, 100% 100%, 0 100%);
+                }
+            }
+            p {
+                margin-top: 9.5rem;
+                font-size: 1.5rem;
+                text-align: left;
+                color: $light-gray-3;
+            }
+            // hire me button's style
+            button {
+                margin-top: 2.5rem;
+                display: inline-block;
+                padding: 0.8rem 1.5rem;
+                border: 1px solid $purple;
+                background-color: transparent;
+                color: $purple;
+                font-size: 1.5rem;
+                font-weight: bold;
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+                cursor: pointer;
+                transition: all 0.5s ease-in-out;
+                outline: none;
+            }
+            button::before {
+                content: "";
+                position: absolute;
+                background-color: $purple;
+                width: 100%;
+                height: 0;
+                left: 0;
+                bottom: 0;
+                border-radius: 50% 50% 0 0;
+                transition: all 0.5s ease-in-out;
+                z-index: -1;
+            }
+            button:hover {
+                color: $light-font-color;
+            }
+            button:hover::before {
+                height: 180%;
+            }
+        }
+    }
+}
+
+// wave effect on showcase ---------------------------
+.showcase::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    background-image: url("/assets/waves/Vector.svg");
+    z-index: 10;
+    animation: wave 20s ease infinite;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0;
+    }
+    25% {
+        background-position: 25%;
+    }
+    50% {
+        background-position: 50%;
+    }
+    75% {
+        background-position: 75%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+// showcase after
+.showcase::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    background-image: url("/assets/waves/Vector-2\ \(2\).svg");
+    z-index: 10;
+    animation: wave-2 15s linear infinite;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-delay: 0s;
+}
+
+@keyframes wave-2 {
+    0% {
+        background-position: 0;
+    }
+    25% {
+        background-position: 25%;
+    }
+    50% {
+        background-position: 50%;
+    }
+    75% {
+        background-position: 75%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
+
+// showcase wave effect ends -------------
+// main-page styles starts here ---------------------
+.portfolio {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    transition: all 1s ease-in-out;
+    background-color: $light-gray;
+    .design {
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+        clip-path: polygon(0 0, 0 50%, 100% 50%, 100% 0);
+        transition: all 1s linear;
+        .container {
+            clip-path: polygon(0 0, 0 50%, 100% 50%, 100% 0);
+            background-color: $light-blue;
+            transition: all 1s linear;
+            height: 100%;
+            width: 100%;
+        }
+        .container:hover {
+            clip-path: polygon(0 0, 0 90%, 100% 90%, 100% 0);
+        }
+    }
+    .design:hover {
+        clip-path: polygon(0 0, 0 90%, 100% 90%, 100% 0);
+    }
+    // .design:hover {
+    //     clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+    //     z-index: 10;
+    // }
+    // .design:hover {}
+    .frond-end {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        z-index: 0;
+        clip-path: polygon(0 50%, 0 100%, 100% 100%, 100% 50%);
+        transition: all 1s linear;
+        .container {
+            clip-path: polygon(0 50%, 0 100%, 100% 100%, 100% 50%);
+            background-color: $dark-blue;
+            transition: all 1s linear;
+            height: 100%;
+            width: 100%;
+        }
+        .container:hover {
+            clip-path: polygon(0 10%, 0 100%, 100% 100%, 100% 10%);
+        }
+    }
+    .frond-end:hover {
+        clip-path: polygon(0 10%, 0 100%, 100% 100%, 100% 10%);
+    }
+    // .frond-end:hover {
+    //     clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+    //     z-index: 9;
+    // }
+    //     .frond-end:hover {}
+}
+
+// media queries for large screens -------------------------------
+@media screen and (min-width: 768px) {
+    .humberger-menu {
+        display: none;
+    }
+    // nav-bar for large screen
+    nav {
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        left: 0;
+        .container {
+            .logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 0;
+                img {
+                    height: 5rem;
+                    width: 5rem;
+                    z-index: 1000;
+                    overflow: auto;
+                }
+            }
+            // mobile-nav changed to large screen
+            ul {
+                position: relative;
+                // top: 2rem;
+                height: 10vh;
+                background-color: transparent;
+                flex-direction: row;
+                transform: translateY(0);
+                justify-content: flex-end;
+                align-items: center;
+                li {
+                    margin: 0;
+                    width: fit-content;
+                    a {
+                        color: $dark-font-color;
+                        font-size: 1.5rem;
+                        display: inline-block;
+                        padding: 1rem 2rem;
+                        font-weight: 600;
+                        background-color: transparent;
+                        position: relative;
+                        overflow: hidden;
+                        transition: all 0.5s ease-in-out;
+                    }
+                    a::before {
+                        content: "";
+                        position: absolute;
+                        background-color: $light-blue;
+                        width: 100%;
+                        height: 0;
+                        left: 0;
+                        bottom: 0;
+                        border-radius: 50% 50% 0 0;
+                        transition: all 0.5s ease-in-out;
+                        z-index: -1;
+                    }
+                    a:hover {
+                        color: $light-font-color;
+                    }
+                    a:hover::before {
+                        height: 280%;
+                    }
+                }
+            }
+        }
+    }
+    // showcase
+    .showcase {
+        background-size: 35%;
+        background-position: 80% 15%;
+        .container {
+            // showcase-contents styles
+            .showcase-contents {
+                margin: 3rem 0 3rem 0;
+                .stroke-alireza,
+                .alireza {
+                    font-size: 8rem;
+                }
+                p {
+                    margin-top: 12rem;
+                }
+                button {
+                    padding: 1rem 2rem;
+                }
+            }
+        }
+    }
+    // main-page styles starts here ---------------------
+    .portfolio {
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        transition: all 1s ease-in-out;
+        background-color: $light-gray;
+        .design {
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            z-index: 0;
+            clip-path: polygon(0 100%, 0 0, 50% 0, 50% 100%);
+            transition: all 1s linear;
+            .container {
+                clip-path: polygon(0 100%, 0 0, 50% 0, 50% 100%);
+                background-color: $light-blue;
+                transition: all 1s linear;
+                height: 100%;
+                width: 100%;
+                margin: 3rem auto;
+            }
+            .container:hover {
+                clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+                // z-index: 1;
+            }
+        }
+        .design:hover {
+            clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+        }
+        // .design:hover {
+        //     clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+        //     z-index: 10;
+        // }
+        // .design:hover {}
+        .frond-end {
+            position: absolute;
+            height: 100vh;
+            width: 100%;
+            z-index: 0;
+            clip-path: polygon(50% 100%, 50% 0, 100% 0, 100% 100%);
+            transition: all 1s linear;
+            .container {
+                clip-path: polygon(50% 100%, 50% 0, 100% 0, 100% 100%);
+                margin: 3rem auto;
+                background-color: $dark-blue;
+                transition: all 1s linear;
+                height: 100%;
+                width: 100%;
+            }
+            .container:hover {
+                clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+                // z-index: 1;
+            }
+        }
+        .frond-end:hover {
+            clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+        }
+        // .frond-end:hover {
+        //     clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+        //     z-index: 9;
+        // }
+        //     .frond-end:hover {}
+    }
+}
