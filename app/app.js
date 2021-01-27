@@ -38,13 +38,13 @@ window.onscroll = function() {
     }
 };
 
-// mouse hover effect on portfolio section
-const leftSide = document.querySelector(".design");
-const rightSide = document.querySelector(".frond-end");
+// // mouse hover effect on portfolio section
+// const leftSide = document.querySelector(".design");
+// const rightSide = document.querySelector(".frond-end");
 
-leftSide.addEventListener("mouseover", () => {
-    rightSide.style.zIndex = "-1";
-    setTimeout((e) => {
-        rightSide.style.zIndex = "1";
-    }, 3000);
-});
+// leftSide.addEventListener("mouseover", () => {
+//     rightSide.style.zIndex = "-1";
+//     setTimeout((e) => {
+//         rightSide.style.zIndex = "1";
+//     }, 3000);
+// });

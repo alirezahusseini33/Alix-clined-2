@@ -26,10 +26,10 @@ body {
         display: block;
         margin: 6px 0;
         transition: all 0.5s ease-in-out;
+        margin-left: auto;
     }
     .line-2 {
         width: 3.5rem;
-        margin-left: auto;
     }
     .line-light {
         background-color: $light-bg;
@@ -68,10 +68,10 @@ nav {
         // padding-top: 1rem;
         // logo
         .logo {
-            margin: 2rem 0 0 -1rem;
+            margin: 0 0 0 -1rem;
             img {
-                height: 5rem;
-                width: 5rem;
+                height: 3.5rem;
+                width: 3.5rem;
             }
         }
         ul {
@@ -120,9 +120,9 @@ nav {
     width: 100%;
     position: relative;
     background-color: $light-bg;
-    background-image: url("./assets/backgrounds/Group\ 15.svg");
-    background-size: 80%;
-    background-position: 90% 60%;
+    background-image: url("/assets/backgrounds/Group\ 15.svg");
+    background-size: 100%;
+    background-position: 90% 80%;
     background-repeat: no-repeat;
     .container {
         position: relative;
@@ -225,12 +225,12 @@ nav {
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 200px;
+    height: 100px;
     width: 100%;
     // background-image: url("/assets/waves/Vector.svg");
     clip-path: polygon(0 0, 0% 100%, 80% 100%);
     // clip-path: polygon(0 0, 0% 100%, 50% 100%);
-    background-color: $purple;
+    background-color: $light-gray-bg;
     z-index: 10;
     animation: wave 20s ease infinite;
     background-size: cover;
@@ -261,12 +261,12 @@ nav {
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 200px;
+    height: 100px;
     width: 100%;
     // background-image: url("/assets/waves/Vector-2\ \(2\).svg");
     clip-path: polygon(100% 0, 20% 100%, 100% 100%);
     // clip-path: polygon(100% 0, 50% 100%, 100% 100%);
-    background-color: $purple;
+    background-color: $light-gray-bg;
     z-index: 10;
     animation: wave-2 15s linear infinite;
     background-size: cover;
@@ -299,59 +299,112 @@ nav {
     width: 100%;
     position: relative;
     transition: all 1s ease-in-out;
-    background-color: $light-gray;
-    .design {
-        height: 100vh;
-        width: 100%;
+    background-color: $light-bg;
+    .portfolio-header {
         position: absolute;
-        z-index: 0;
-        clip-path: polygon(0 0, 0 50%, 100% 50%, 100% 0);
-        transition: all 1s linear;
-        .container {
-            clip-path: polygon(0 0, 0 50%, 100% 50%, 100% 0);
-            background-color: $light-blue;
-            transition: all 1s linear;
-            height: 100%;
-            width: 100%;
-        }
-        .container:hover {
-            clip-path: polygon(0 0, 0 90%, 100% 90%, 100% 0);
-        }
-    }
-    .design:hover {
-        clip-path: polygon(0 0, 0 90%, 100% 90%, 100% 0);
-    }
-    // .design:hover {
-    //     clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
-    //     z-index: 10;
-    // }
-    // .design:hover {}
-    .frond-end {
-        position: absolute;
-        height: 100vh;
+        top: -10rem;
+        left: 0;
         width: 100%;
-        z-index: 0;
-        clip-path: polygon(0 50%, 0 100%, 100% 100%, 100% 50%);
-        transition: all 1s linear;
-        .container {
-            clip-path: polygon(0 50%, 0 100%, 100% 100%, 100% 50%);
-            background-color: $dark-blue;
-            transition: all 1s linear;
-            height: 100%;
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+    .container {
+        gap: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25rem 5rem 3rem 3rem;
+        flex-wrap: wrap;
+        flex-direction: column;
+        .boxes {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 25rem;
             width: 100%;
-        }
-        .container:hover {
-            clip-path: polygon(0 10%, 0 100%, 100% 100%, 100% 10%);
+            max-width: 25rem;
+            text-align: center;
+            padding: 0 4rem;
+            .icons {
+                height: 7rem;
+                width: 7rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 100%;
+                background-color: $light-skin-tone;
+                img {
+                    height: 3.5rem;
+                    width: 3.5rem;
+                    object-fit: cover;
+                }
+            }
+            .code-icon {
+                background-color: lighten($light-blue, 40%);
+            }
+            .design-icon {
+                background-color: lighten($light-purple, 10%);
+            }
+            .contents {
+                margin-top: 1rem;
+                padding-top: 2rem;
+                h2 {
+                    margin-bottom: 2rem;
+                }
+                p {
+                    font-size: 1.3rem;
+                }
+                a {
+                    margin-top: 2rem;
+                    padding: 0.5rem 1rem;
+                    // border: 1px solid $light-purple;
+                    display: inline-block;
+                    font-size: 1.1rem;
+                    // color: $light-font-color;
+                }
+            }
+            .code-content {
+                a {
+                    background-color: lighten($light-blue, 40%);
+                }
+            }
+            .design-content {
+                a {
+                    background-color: lighten($light-purple, 10%);
+                }
+            }
+            .programming-content {
+                a {
+                    background-color: $light-skin-tone;
+                }
+            }
         }
     }
-    .frond-end:hover {
-        clip-path: polygon(0 10%, 0 100%, 100% 100%, 100% 10%);
-    }
-    // .frond-end:hover {
-    //     clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
-    //     z-index: 9;
-    // }
-    //     .frond-end:hover {}
+}
+
+.portfolio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 100%;
+    background-color: $light-gray-bg;
+    clip-path: polygon(100% 0, 0 0, 100% 50%);
+}
+
+.portfolio::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 50%;
+    background-color: $light-gray-bg;
+    clip-path: polygon(100% 0, 0 0, 0 50%);
 }
 
 // media queries for large screens -------------------------------
@@ -394,8 +447,8 @@ nav {
                     margin: 0;
                     width: fit-content;
                     a {
-                        color: $purple;
-                        font-size: 1.5rem;
+                        color: $dark-font-color;
+                        font-size: 1.2rem;
                         display: inline-block;
                         padding: 1rem 2rem;
                         font-weight: 600;
@@ -449,7 +502,7 @@ nav {
     }
     // wave effect on showcase ---------------------------
     .showcase::before {
-        height: 180px;
+        height: 150px;
         width: 100%;
         // background-image: url("/assets/waves/Vector.svg");
         clip-path: polygon(0 0, 0% 100%, 60% 100%);
@@ -457,7 +510,7 @@ nav {
     }
     // showcase after
     .showcase::after {
-        height: 180px;
+        height: 150px;
         // background-image: url("/assets/waves/Vector-2\ \(2\).svg");
         clip-path: polygon(100% 0, 40% 100%, 100% 100%);
         // clip-path: polygon(100% 0, 50% 100%, 100% 100%);
@@ -469,62 +522,89 @@ nav {
         width: 100%;
         position: relative;
         transition: all 1s ease-in-out;
-        background-color: $light-gray;
-        .design {
-            height: 100vh;
-            width: 100%;
+        background-color: $light-bg;
+        .portfolio-header {
             position: absolute;
-            z-index: 0;
-            clip-path: polygon(0 100%, 0 0, 50% 0, 50% 100%);
-            transition: all 1s linear;
-            .container {
-                clip-path: polygon(0 100%, 0 0, 50% 0, 50% 100%);
-                background-color: $light-blue;
-                transition: all 1s linear;
-                height: 100%;
-                width: 100%;
-                margin: 3rem auto;
-            }
-            .container:hover {
-                clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
-                // z-index: 1;
-            }
-        }
-        .design:hover {
-            clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
-        }
-        // .design:hover {
-        //     clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
-        //     z-index: 10;
-        // }
-        // .design:hover {}
-        .frond-end {
-            position: absolute;
-            height: 100vh;
+            top: -10rem;
+            left: 0;
             width: 100%;
-            z-index: 0;
-            clip-path: polygon(50% 100%, 50% 0, 100% 0, 100% 100%);
-            transition: all 1s linear;
-            .container {
-                clip-path: polygon(50% 100%, 50% 0, 100% 0, 100% 100%);
-                margin: 3rem auto;
-                background-color: $dark-blue;
-                transition: all 1s linear;
-                height: 100%;
-                width: 100%;
-            }
-            .container:hover {
-                clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
-                // z-index: 1;
+            margin-left: 12rem;
+            max-width: 1100px;
+            h1 {
+                font-size: 2.5rem;
             }
         }
-        .frond-end:hover {
-            clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+        .container {
+            gap: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 25rem;
+            flex-direction: row;
+            .boxes {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                height: 25rem;
+                // min-width: 20rem;
+                text-align: center;
+                padding: 0 4rem;
+                .icons {
+                    height: 7rem;
+                    width: 7rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 100%;
+                    background-color: $light-skin-tone;
+                    img {
+                        height: 3.5rem;
+                        width: 3.5rem;
+                        object-fit: cover;
+                    }
+                }
+                .code-icon {
+                    background-color: lighten($light-blue, 40%);
+                }
+                .design-icon {
+                    background-color: lighten($light-purple, 10%);
+                }
+                .contents {
+                    margin-top: 1rem;
+                    padding-top: 2rem;
+                    h2 {
+                        margin-bottom: 2rem;
+                    }
+                    p {
+                        font-size: 1.3rem;
+                    }
+                    a {
+                        margin-top: 2rem;
+                        padding: 0.5rem 1rem;
+                        // border: 1px solid $light-purple;
+                        display: inline-block;
+                        font-size: 1.1rem;
+                        // color: $light-font-color;
+                    }
+                }
+                .code-content {
+                    a {
+                        background-color: lighten($light-blue, 40%);
+                    }
+                }
+                .design-content {
+                    a {
+                        background-color: lighten($light-purple, 10%);
+                    }
+                }
+                .programming-content {
+                    a {
+                        background-color: $light-skin-tone;
+                    }
+                }
+            }
         }
-        // .frond-end:hover {
-        //     clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
-        //     z-index: 9;
-        // }
-        //     .frond-end:hover {}
     }
 }
