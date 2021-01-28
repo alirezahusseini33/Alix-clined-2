@@ -58,6 +58,7 @@ nav {
     top: 0;
     left: 0;
     z-index: 1000;
+    transition: all 0.5s linear;
     .container {
         width: 100%;
         height: 100%;
@@ -101,9 +102,11 @@ nav {
         // navbar toggle class
         .open {
             transform: translateY(0);
+            transition: all 0.5s linear;
         }
         .close {
             transform: translateY(-100%);
+            transition: all 0.5s linear;
         }
     }
 }
@@ -112,6 +115,7 @@ nav {
 .nav-bg {
     background-color: $light-bg;
     box-shadow: 0 7.5px 10px rgba(0, 0, 0, 0.01);
+    transition: all 0.5s linear;
 }
 
 // showcase styles
@@ -120,7 +124,7 @@ nav {
     width: 100%;
     position: relative;
     background-color: $light-bg;
-    background-image: url("/assets/backgrounds/Group\ 15.svg");
+    background-image: url("/assets/backgrounds/shoecase-bg.svg");
     background-size: 100%;
     background-position: 90% 80%;
     background-repeat: no-repeat;
@@ -185,10 +189,10 @@ nav {
         button {
             margin-top: 2.5rem;
             display: inline-block;
-            padding: 0.8rem 1.5rem;
-            border: 1px solid $green;
+            padding: 0.8rem 2rem;
+            border: 1px solid $lighter-purple;
             background-color: transparent;
-            color: $green;
+            color: $lighter-purple;
             font-size: 1.5rem;
             font-weight: bold;
             position: relative;
@@ -201,7 +205,7 @@ nav {
         button::before {
             content: "";
             position: absolute;
-            background-color: $green;
+            background-color: $lighter-purple;
             width: 100%;
             height: 0;
             left: 0;
@@ -312,7 +316,6 @@ nav {
         z-index: 10;
         margin-top: 3rem;
         padding: 0 3rem;
-        background-color: lightpink;
         h1 {
             font-size: 2.5rem;
             margin-top: 100px;
@@ -324,22 +327,21 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 5rem 5rem 3rem 3rem;
+        padding: 5rem 3rem 5rem 3rem;
         gap: 5rem;
         flex-wrap: wrap;
         flex-direction: column;
-        background-color: limegreen;
         .boxes {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            height: 35rem;
+            height: 32rem;
             width: 90%;
             margin: 0 auto;
             text-align: center;
-            padding: 2rem 1rem;
-            background-color: $light-skin-tone;
+            padding: 2rem 1rem 2rem 1rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
             .icons {
                 height: 7rem;
                 width: 7rem;
@@ -362,7 +364,6 @@ nav {
             }
             .contents {
                 margin-top: 1rem;
-                padding-top: 2rem;
                 h2 {
                     margin: 4rem 0 2rem 0;
                 }
@@ -370,8 +371,8 @@ nav {
                     font-size: 1.3rem;
                 }
                 a {
-                    margin-top: 5rem;
-                    padding: 1.5rem 2rem;
+                    margin-top: 3rem;
+                    padding: 1rem 2rem;
                     // border: 1px solid $light-purple;
                     display: inline-block;
                     font-size: 1.1rem;
@@ -380,17 +381,17 @@ nav {
             }
             .code-content {
                 a {
-                    background-color: lighten($light-blue, 40%);
+                    border: 1px solid $light-blue;
                 }
             }
             .design-content {
                 a {
-                    background-color: lighten($light-purple, 10%);
+                    border: 1px solid $lighter-purple;
                 }
             }
             .programming-content {
                 a {
-                    background-color: $light-skin-tone;
+                    border: 1px solid $skin-tone;
                 }
             }
         }
@@ -400,7 +401,7 @@ nav {
 .portfolio::before {
     content: "";
     position: absolute;
-    top: -1;
+    top: -2px;
     left: 0;
     height: 150px;
     width: 100%;
@@ -411,7 +412,7 @@ nav {
 .portfolio::after {
     content: "";
     position: absolute;
-    top: -1;
+    top: -2px;
     left: 0;
     height: 150px;
     width: 100%;
@@ -472,7 +473,7 @@ nav {
                     a::before {
                         content: "";
                         position: absolute;
-                        background-color: $purple;
+                        background-color: $lighter-purple;
                         width: 100%;
                         height: 0;
                         left: 0;
@@ -530,18 +531,10 @@ nav {
     // showcase wave effect ends -------------
     // main-page styles starts here ---------------------
     .portfolio {
-        min-height: 100vh;
-        width: 100%;
-        position: relative;
-        transition: all 1s ease-in-out;
-        background-color: $light-bg;
         .portfolio-header {
-            position: absolute;
-            top: -10rem;
-            left: 0;
             width: 100%;
-            margin-left: 12rem;
             max-width: 1100px;
+            margin: 3rem auto 0 auto;
             h1 {
                 font-size: 2.5rem;
             }
@@ -550,11 +543,8 @@ nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 20rem;
             flex-direction: row;
-            background-color: $lighter-purple;
             .boxes {
-                flex: 1;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
@@ -563,18 +553,17 @@ nav {
                 width: 30rem;
                 text-align: center;
                 // padding: 0 4rem;
-                background-color: $red;
                 .icons {
-                    height: 7rem;
-                    width: 7rem;
+                    height: 10rem;
+                    width: 10rem;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     border-radius: 100%;
                     background-color: $light-skin-tone;
                     img {
-                        height: 3.5rem;
-                        width: 3.5rem;
+                        height: 4.5rem;
+                        width: 4.5rem;
                         object-fit: cover;
                     }
                 }
@@ -586,7 +575,6 @@ nav {
                 }
                 .contents {
                     margin-top: 1rem;
-                    padding-top: 2rem;
                     h2 {
                         margin-bottom: 2rem;
                     }
@@ -595,26 +583,12 @@ nav {
                     }
                     a {
                         margin-top: 2rem;
-                        padding: 0.5rem 1rem;
+                        padding: 1rem 2rem;
                         // border: 1px solid $light-purple;
                         display: inline-block;
                         font-size: 1.1rem;
+                        font-weight: bold;
                         // color: $light-font-color;
-                    }
-                }
-                .code-content {
-                    a {
-                        background-color: lighten($light-blue, 40%);
-                    }
-                }
-                .design-content {
-                    a {
-                        background-color: lighten($light-purple, 10%);
-                    }
-                }
-                .programming-content {
-                    a {
-                        background-color: $light-skin-tone;
                     }
                 }
             }

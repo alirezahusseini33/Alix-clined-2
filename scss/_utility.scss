@@ -22,7 +22,7 @@ h2,
 h3,
 a,
 p,
-label {
+labe l {
     letter-spacing: 1px;
 }
 
@@ -43,7 +43,7 @@ p {
 }
 
 // flex items
-.flex {
+.f lex {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,20 +55,20 @@ p {
     grid-template-columns: 1fr 1fr;
 }
 
-// main-page
+//  main-page
 .main-page {
     min-height: 100vh;
 }
 
-// content-section utility styles
-.content-section {
+// c ontent-section utility styles
+.con tent-section {
     background-color: $dark-bg;
     height: 100vh;
     .container {
         padding: 13rem 2rem;
         color: darken($light-gray, 70%);
     }
-    .f-paragraph {
+    .f -paragraph {
         font-size: 1.5rem;
         letter-spacing: 2px;
         margin-bottom: 2rem;
@@ -78,7 +78,7 @@ p {
         color: $light-font-color;
         font-size: 4rem;
     }
-    .c-section-container {
+    .c -section-container {
         padding-left: 2rem;
         margin-top: 2rem;
         p {
@@ -101,7 +101,7 @@ p {
     }
 }
 
-// image-section
+// i mage-section
 .image-section {
     background-position: center;
     background-size: cover;
@@ -110,7 +110,7 @@ p {
     width: 100%;
 }
 
-// button styles
+//  button styles
 .btn-1 {
     display: inline-block;
     font-weight: bold;
@@ -131,12 +131,10 @@ p {
     border: 1px solid $yellow-1;
 }
 
-// water button styles
+// wat er button styles
 .water-btn-1 {
     margin-top: 1.5rem;
     display: inline-block;
-    padding: 0.5rem 1rem;
-    border: 1px solid $light-blue;
     background-color: transparent;
     color: $light-blue;
     font-size: 1.5rem;
@@ -169,4 +167,74 @@ p {
     height: 180%;
 }
 
-// humberger-menu opening
+// wat er button styles
+.water-btn-2 {
+    margin-top: 1.5rem;
+    display: inline-block;
+    background-color: transparent;
+    color: $lighter-purple;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
+}
+
+.water-btn-2::before {
+    content: "";
+    position: absolute;
+    background-color: $lighter-purple;
+    width: 100%;
+    height: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.water-btn-2:hover {
+    color: $light-font-color;
+}
+
+.water-btn-2:hover::before {
+    height: 180%;
+}
+
+// wat er button styles
+.water-btn-3 {
+    margin-top: 1.5rem;
+    display: inline-block;
+    background-color: transparent;
+    color: darken($skin-tone, 30%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
+}
+
+.water-btn-3::before {
+    content: "";
+    position: absolute;
+    background-color: $skin-tone;
+    width: 100%;
+    height: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+    transition: all 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.water-btn-3:hover {
+    color: $light-font-color;
+}
+
+.water-btn-3:hover::before {
+    height: 180%;
+}
