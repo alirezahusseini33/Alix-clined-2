@@ -541,6 +541,17 @@ nav {
     clip-path: polygon(100% 0, 100% 100%, 0 50%);
 }
 
+// footer section styles starts here -------------------
+.footer {
+    min-height: 100vh;
+    width: 100%;
+    background-color: $light-purple;
+    .container {
+        height: 100%;
+        width: 100%;
+    }
+}
+
 // media queries for large screens -------------------------------
 @media screen and (min-width: 768px) {
     .humberger-menu {
