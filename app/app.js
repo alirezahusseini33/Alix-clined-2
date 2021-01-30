@@ -4,6 +4,8 @@ const navLink = document.querySelectorAll(".nav-link");
 const navLists = document.querySelectorAll("li");
 const nav = document.querySelector("nav");
 const humbergerLine = document.querySelectorAll(".lines");
+const contactBtn = document.querySelector(".contact-btn-fixed");
+const skillBtn = document.querySelector(".what-i-can");
 // event letseners
 humbergerMenu.addEventListener("click", () => {
     navMenu.classList.toggle("open");
@@ -27,11 +29,15 @@ window.onscroll = function() {
     let top = window.scrollY;
     if (top >= 5) {
         nav.classList.add("nav-bg");
+        contactBtn.classList.add("carry");
+        skillBtn.classList.add("carry-2");
         // humbergerLine.forEach((line) => {
         //     line.classList.add("line-light");
         // });
     } else {
         nav.classList.remove("nav-bg");
+        contactBtn.classList.remove("carry");
+        skillBtn.classList.remove("carry-2");
         // humbergerLine.forEach((line) => {
         //     line.classList.remove("line-light");
         // });
