@@ -25,32 +25,16 @@ navLists.forEach((link) => {
 });
 
 // navbar background color
+// animating fixed contact btn on screen when scrolling
 window.onscroll = function() {
-    let top = window.scrollY;
-    if (top >= 5) {
+    let topTow = window.scrollY;
+    if (topTow >= 100) {
         nav.classList.add("nav-bg");
         contactBtn.classList.add("carry");
         skillBtn.classList.add("carry-2");
-        // humbergerLine.forEach((line) => {
-        //     line.classList.add("line-light");
-        // });
     } else {
         nav.classList.remove("nav-bg");
         contactBtn.classList.remove("carry");
         skillBtn.classList.remove("carry-2");
-        // humbergerLine.forEach((line) => {
-        //     line.classList.remove("line-light");
-        // });
     }
 };
-
-// // mouse hover effect on portfolio section
-// const leftSide = document.querySelector(".design");
-// const rightSide = document.querySelector(".frond-end");
-
-// leftSide.addEventListener("mouseover", () => {
-//     rightSide.style.zIndex = "-1";
-//     setTimeout((e) => {
-//         rightSide.style.zIndex = "1";
-//     }, 3000);
-// });
