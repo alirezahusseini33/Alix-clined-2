@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    // overflow-x: hidden;
 }
 
 html {
@@ -14,7 +15,7 @@ html {
 }
 
 li {
-    list-style: none;
+    list-style-type: none;
 }
 
 h1,
