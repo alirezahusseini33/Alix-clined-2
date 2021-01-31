@@ -1082,8 +1082,8 @@ nav {
                 padding: 1rem 0 0 0;
                 display: grid;
                 grid-template-columns: 1fr;
-                grid-template-rows: auto 1fr auto;
-                row-gap: 10px;
+                grid-template-rows: auto 300px auto;
+                row-gap: 0;
                 height: 90%;
                 margin: auto 0;
                 .biography-section {
@@ -1091,13 +1091,15 @@ nav {
                     grid-column: 1/2;
                     grid-row: 1/2;
                     background-color: $orange-color;
+                    display: grid;
+                    align-items: center;
                     h2 {
-                        margin: 0 0 2rem 0;
+                        margin: 0;
                     }
                     p {
                         font-size: 1.5rem;
-                        margin: 2rem 0 2rem 0;
                         overflow: hidden;
+                        margin: 0;
                     }
                 }
                 .skills-section {
@@ -1106,7 +1108,7 @@ nav {
                     display: grid;
                     grid-template-columns: repeat(12, 1fr);
                     grid-template-rows: repeat(12, 1fr);
-                    height: 80%;
+                    height: 100%;
                     width: 100%;
                     background-color: red;
                     div {
@@ -1184,14 +1186,14 @@ nav {
                     grid-row: 3/-1;
                     height: 100%;
                     display: flex;
-                    justify-content: flex-start;
-                    align-items: flex-start;
+                    justify-content: space-between;
+                    align-items: center;
                     padding: 0;
                     margin: 0;
                     background-color: blue;
                     a {
                         display: inline-block;
-                        // margin: 0 auto;
+                        margin: 0 auto;
                         padding: 0.7rem 1.5rem;
                     }
                     a:first-child {
