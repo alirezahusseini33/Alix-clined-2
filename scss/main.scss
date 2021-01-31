@@ -5,7 +5,7 @@
 // body styles
 body {
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     font-family: "Nunito", sans-serif;
     scroll-behavior: smooth;
     position: relative;
@@ -447,7 +447,6 @@ nav {
                 grid-template-rows: repeat(12, 1fr);
                 height: 100%;
                 width: 100%;
-                background-color: $light-blue;
                 div {
                     display: flex;
                     justify-content: center;
@@ -456,11 +455,11 @@ nav {
                     width: 6rem;
                     justify-self: center;
                     align-self: center;
+                    transition: all 0.5s ease-in-out;
                 }
                 .skills-header-text {
                     grid-column: 5/9;
                     grid-row: 5/9;
-                    background-color: red;
                     height: 100%;
                     width: 100%;
                     h1 {
@@ -1032,10 +1031,10 @@ nav {
         .container {
             height: 100%;
             width: 100%;
-            padding: 2rem 3rem 5rem 3rem;
+            padding: 2rem 3rem 0 3rem;
             z-index: 10;
             display: grid;
-            grid-template-columns: 1fr 3fr;
+            grid-template-columns: 1fr 2fr;
             grid-template-rows: 1fr;
             .about-me-header {
                 grid-column: 1/2;
@@ -1083,7 +1082,7 @@ nav {
                 padding: 1rem 0 0 0;
                 display: grid;
                 grid-template-columns: 1fr;
-                grid-template-rows: auto 1fr 200px;
+                grid-template-rows: auto 1fr auto;
                 row-gap: 10px;
                 height: 90%;
                 margin: auto 0;
@@ -1091,6 +1090,7 @@ nav {
                     width: 100%;
                     grid-column: 1/2;
                     grid-row: 1/2;
+                    background-color: $orange-color;
                     h2 {
                         margin: 0 0 2rem 0;
                     }
@@ -1106,9 +1106,9 @@ nav {
                     display: grid;
                     grid-template-columns: repeat(12, 1fr);
                     grid-template-rows: repeat(12, 1fr);
-                    height: 100%;
+                    height: 80%;
                     width: 100%;
-                    background-color: $light-blue;
+                    background-color: red;
                     div {
                         display: flex;
                         justify-content: center;
@@ -1118,10 +1118,20 @@ nav {
                         justify-self: center;
                         align-self: center;
                     }
+                    #hover-skill {
+                        cursor: pointer;
+                    }
+                    #hidden-skills {
+                        opacity: 0;
+                        transform: scale(0);
+                    }
+                    #hover-skill:hover~#hidden-skills {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
                     .skills-header-text {
                         grid-column: 5/9;
                         grid-row: 5/9;
-                        background-color: red;
                         height: 100%;
                         width: 100%;
                         h1 {
@@ -1172,11 +1182,13 @@ nav {
                 .about-me-btn {
                     grid-column: 1/2;
                     grid-row: 3/-1;
+                    height: 100%;
                     display: flex;
                     justify-content: flex-start;
                     align-items: flex-start;
-                    // padding: 3rem 0 0 0;
-                    background-color: red;
+                    padding: 0;
+                    margin: 0;
+                    background-color: blue;
                     a {
                         display: inline-block;
                         // margin: 0 auto;

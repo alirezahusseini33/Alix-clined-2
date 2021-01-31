@@ -6,6 +6,8 @@ const nav = document.querySelector("nav");
 const humbergerLine = document.querySelectorAll(".lines");
 const contactBtn = document.querySelector(".contact-btn-fixed");
 const skillBtn = document.querySelector(".what-i-can");
+const hiddenSkills = document.querySelectorAll("#hidden-skills");
+const hoverSkill = document.querySelector("#hover-skill");
 // event letseners
 humbergerMenu.addEventListener("click", () => {
     navMenu.classList.toggle("open");
@@ -38,3 +40,8 @@ window.onscroll = function() {
         skillBtn.classList.remove("carry-2");
     }
 };
+
+// reveal skills on hovering
+hoverSkill.addEventListener("onmouseover", () => {
+    hiddenSkills.style.opacity = "1";
+});
